@@ -10,6 +10,7 @@ import {
   getWindowManifests,
   getWindows,
   getMaximizedWindowsIds,
+  getWindowHeight,
 } from '../../../src/state/selectors/windows';
 
 describe('getWindows', () => {
@@ -150,6 +151,16 @@ describe('getViewer', () => {
       id: 'bar',
     });
   });
+});
+
+describe('getHeight', () => {
+  const state = {
+    windows: {
+      abc123: { height: 500 },
+    },
+  };
+  const received = getWindowHeight(state, { windowId: 'abc123' });
+  expect(received).toBe(500);
 });
 
 describe('getWindowDraggability', () => {

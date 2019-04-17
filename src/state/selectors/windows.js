@@ -103,3 +103,15 @@ export const getWindowDraggability = createSelector(
     return manyWindows && window && window.maximized === false;
   },
 );
+
+/**
+ * Returns the height of a window
+ * @param {object} state
+ * @param {String} windowId
+ */
+export const getWindowHeight = createSelector(
+  [
+    getWindow,
+  ],
+  window => (window.height),
+);
