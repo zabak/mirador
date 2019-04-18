@@ -80,26 +80,4 @@ describe('WindowList', () => {
       ).toBe(true);
     });
   });
-
-  describe('with multiple windows', () => {
-    beforeEach(() => {
-      titles = { xyz: 'Some title' };
-
-      wrapper = shallow(
-        <WindowList
-          containerId="mirador"
-          anchorEl={{}}
-          titles={titles}
-          windowIds={['xyz', 'zyx']}
-          handleClose={handleClose}
-          focusWindow={focusWindow}
-        />,
-      );
-    });
-
-    it('has the first window in the list selected', () => {
-      expect(wrapper.find('WithStyles(MenuItem)').first().props().selected).toBe(true);
-      expect(wrapper.find('WithStyles(MenuItem)').last().props().selected).toBe(false);
-    });
-  });
 });
