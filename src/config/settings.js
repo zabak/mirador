@@ -173,6 +173,7 @@ export default {
   availableLanguages: { // All the languages available in the language switcher
     de: 'Deutsch',
     en: 'English',
+    cs: 'Česky',
   },
   displayAllAnnotations: false, // Configure if annotations to be displayed on the canvas by default when fetched
   translations: { // Translations can be added to inject new languages or override existing labels
